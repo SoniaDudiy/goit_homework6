@@ -1,35 +1,51 @@
 import sys
 from pathlib import Path
 
-IMAGE_FILES = []
-VIDEO_FILES = []
-DOCUMENT_FILES = []
-AUDIO_FILES = []
-ARCHIVE_FILES = []
+JPEG_IMAGES = []
+JPG_IMAGES = []
+PNG_IMAGES = []
+SVG_IMAGES = []
+AVI_VIDEOS = []
+MP4_VIDEOS = []
+MOV_VIDEOS = []
+MKV_VIDEOS = []
+DOC_DOCUMENTS = []
+DOCX_DOCUMENTS = []
+TXT_DOCUMENTS = []
+PDF_DOCUMENTS = []
+XLSX_DOCUMENTS = []
+PPTX_DOCUMENTS = []
+MP3_AUDIO = []
+OGG_AUDIO = []
+WAV_AUDIO = []
+AMR_AUDIO = []
+ZIP_ARCHIVES = []
+GZ_ARCHIVES = []
+TAR_ARCHIVES = []
 UNKNOWN_FILES = []
 
 REGISTER_EXTENSION = {
-    'JPEG': IMAGE_FILES,
-    'JPG': IMAGE_FILES,
-    'PNG': IMAGE_FILES,
-    'SVG': IMAGE_FILES,
-    'AVI': VIDEO_FILES,
-    'MP4': VIDEO_FILES,
-    'MOV': VIDEO_FILES,
-    'MKV': VIDEO_FILES,
-    'DOC': DOCUMENT_FILES,
-    'DOCX': DOCUMENT_FILES,
-    'TXT': DOCUMENT_FILES,
-    'PDF': DOCUMENT_FILES,
-    'XLSX': DOCUMENT_FILES,
-    'PPTX': DOCUMENT_FILES,
-    'MP3': AUDIO_FILES,
-    'OGG': AUDIO_FILES,
-    'WAV': AUDIO_FILES,
-    'AMR': AUDIO_FILES,
-    'ZIP': ARCHIVE_FILES,
-    'GZ': ARCHIVE_FILES,
-    'TAR': ARCHIVE_FILES
+    'JPEG': JPEG_IMAGES,
+    'JPG': JPG_IMAGES,
+    'PNG': PNG_IMAGES,
+    'SVG': SVG_IMAGES,
+    'AVI': AVI_VIDEOS,
+    'MP4': MP4_VIDEOS,
+    'MOV': MOV_VIDEOS,
+    'MKV': MKV_VIDEOS,
+    'DOC': DOC_DOCUMENTS,
+    'DOCX': DOCX_DOCUMENTS,
+    'TXT': TXT_DOCUMENTS,
+    'PDF': PDF_DOCUMENTS,
+    'XLSX': XLSX_DOCUMENTS,
+    'PPTX': PPTX_DOCUMENTS,
+    'MP3': MP3_AUDIO,
+    'OGG': OGG_AUDIO,
+    'WAV': WAV_AUDIO,
+    'AMR': AMR_AUDIO,
+    'ZIP': ZIP_ARCHIVES,
+    'GZ': GZ_ARCHIVES,
+    'TAR': TAR_ARCHIVES
 }
 
 FOLDERS = []
@@ -65,27 +81,27 @@ if __name__ == "__main__":
         folder_to_scan = sys.argv[1]
         print(f'Starting in folder: {folder_to_scan}')
         scan(Path(folder_to_scan))
-        print(f'Images (JPEG): {IMAGE_FILES}')
-        print(f'Images (JPG): {IMAGE_FILES}')
-        print(f'Images (PNG): {IMAGE_FILES}')
-        print(f'Images (SVG): {IMAGE_FILES}')
-        print(f'Videos (AVI): {VIDEO_FILES}')
-        print(f'Videos (MP4): {VIDEO_FILES}')
-        print(f'Videos (MOV): {VIDEO_FILES}')
-        print(f'Videos (MKV): {VIDEO_FILES}')
-        print(f'Documents (DOC): {DOCUMENT_FILES}')
-        print(f'Documents (DOCX): {DOCUMENT_FILES}')
-        print(f'Documents (TXT): {DOCUMENT_FILES}')
-        print(f'Documents (PDF): {DOCUMENT_FILES}')
-        print(f'Documents (XLSX): {DOCUMENT_FILES}')
-        print(f'Documents (PPTX): {DOCUMENT_FILES}')
-        print(f'Audio (MP3): {AUDIO_FILES}')
-        print(f'Audio (OGG): {AUDIO_FILES}')
-        print(f'Audio (WAV): {AUDIO_FILES}')
-        print(f'Audio (AMR): {AUDIO_FILES}')
-        print(f'Archives (ZIP): {ARCHIVE_FILES}')
-        print(f'Archives (GZ): {ARCHIVE_FILES}')
-        print(f'Archives (TAR): {ARCHIVE_FILES}')
+        print(f'Images (JPEG): {JPEG_IMAGES}')
+        print(f'Images (JPG): {JPG_IMAGES}')
+        print(f'Images (PNG): {PNG_IMAGES}')
+        print(f'Images (SVG): {SVG_IMAGES}')
+        print(f'Videos (AVI): {AVI_VIDEOS}')
+        print(f'Videos (MP4): {MP4_VIDEOS}')
+        print(f'Videos (MOV): {MOV_VIDEOS}')
+        print(f'Videos (MKV): {MKV_VIDEOS}')
+        print(f'Documents (DOC): {DOC_DOCUMENTS}')
+        print(f'Documents (DOCX): {DOCX_DOCUMENTS}')
+        print(f'Documents (TXT): {TXT_DOCUMENTS}')
+        print(f'Documents (PDF): {PDF_DOCUMENTS}')
+        print(f'Documents (XLSX): {XLSX_DOCUMENTS}')
+        print(f'Documents (PPTX): {PPTX_DOCUMENTS}')
+        print(f'Audio (MP3): {MP3_AUDIO}')
+        print(f'Audio (OGG): {OGG_AUDIO}')
+        print(f'Audio (WAV): {WAV_AUDIO}')
+        print(f'Audio (AMR): {AMR_AUDIO}')
+        print(f'Archives (ZIP): {ZIP_ARCHIVES}')
+        print(f'Archives (GZ): {GZ_ARCHIVES}')
+        print(f'Archives (TAR): {TAR_ARCHIVES}')
 
         print(f'Types of files in folder: {EXTENSION}')
         print(f'Unknown file types: {UNKNOWN}')
